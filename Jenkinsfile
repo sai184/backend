@@ -14,7 +14,9 @@ agent { label 'workstation' }
    }
     stage('unit testing') {
         steps{
-          echo 'CI'
+          //ideally unit tests we should run ,but devolper skipped it so assuming those are good and we are good proceding
+                   // sh 'npm test'
+                    echo 'CI'
           }
          }
 
@@ -25,3 +27,6 @@ agent { label 'workstation' }
      }
  }
 }
+
+
+#annyalsis report will come from qualitygate
