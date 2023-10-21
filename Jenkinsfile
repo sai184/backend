@@ -6,19 +6,19 @@ agent { label 'workstation' }
    sh 'npm install'
    }
   }
-  stage(code quality) {
+  stage('code quality') {
    steps{
      sh 'sonar-scanner -Dsonar.host.url=http://172.31.39.191:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=backend -Dsonar.qualitygate.wait=true'
      echo 'ok'
      }
    }
-    stage(unit testing) {
+    stage('unit testing') {
         steps{
           echo 'CI'
           }
          }
 
-   stage(deploy to production) {
+   stage('deploy to production') {
     steps{
       echo 'CI'
       }
