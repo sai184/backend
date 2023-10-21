@@ -1,10 +1,20 @@
 pipeline{
 agent { label 'workstation' }
  stages{
- stage(CI) {
+ stage(Compile code) {
  steps{
-   echo 'CI'
+   sh 'npm install'
    }
   }
+  stage(Unit test code) {
+   steps{
+     echo 'CI'
+     }
+    }
+   stage(deploy to production) {
+    steps{
+      echo 'CI'
+      }
+     }
  }
 }
