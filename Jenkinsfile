@@ -1,7 +1,7 @@
 pipeline{
 agent { label 'workstation' }
  stages{
- stage(download dependencies) {
+ stage('download dependencies') {
  steps{
    sh 'npm install'
    }
