@@ -1,16 +1,22 @@
 pipeline{
 agent { label 'workstation' }
  stages{
- stage(Compile code) {
+ stage(download dependencies) {
  steps{
    sh 'npm install'
    }
   }
-  stage(Unit test code) {
+  stage(code quality) {
    steps{
-     echo 'CI'
+     sh 'sonar-scanner -Dsonar.host.url=http://172.31.39.191:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=backend'
      }
     }
+    stage(unit testing) {
+        steps{
+          echo 'CI'
+          }
+         }
+
    stage(deploy to production) {
     steps{
       echo 'CI'
