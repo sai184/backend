@@ -10,7 +10,7 @@ agent { label 'workstation' }
 
     when {
             allOf {
-              expression { env.TAG_NAME != env.GIT_BRANCH }
+              expression { TAG_NAME != GIT_BRANCH }
             }
           }
    steps{
