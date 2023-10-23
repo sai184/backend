@@ -46,5 +46,5 @@ agent { label 'workstation' }
 }
 
 
-#annyalsis report will come from qualitygate
+//annyalsis report will come from qualitygate
 //here pipeline is failing yy beacuse in code it has some errror we cant do anything our job is just desghin pipeline
