@@ -4,6 +4,7 @@ agent { label 'workstation' }
  stage('download dependencies') {
  steps{
    sh 'npm install'
+   sh 'env'
    }
   }
   stage('code quality') {
