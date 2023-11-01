@@ -1,5 +1,5 @@
-FROM node
-RUN  mkdir /app
+FROM        lnode
+RUN         mkdir /app
 WORKDIR     /app
 ADD         node_modules/ /app/node_modules/
 ADD         schema/ /app/schema/
